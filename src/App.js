@@ -19,11 +19,11 @@ const buttonStyle = {
     fontWeight: 'bold',
     cursor: 'pointer',
     transition: 'transform 0.3s'
-  };// App.js - مع الصور بالطريقة الصحيحة
+  };
 
-// استيراد الصور (حذف GymP.jpg فقط وإبقاء GymS.jpg)
 
-// ===== مكون الهيدر =====
+
+
 const Header = ({ currentPage, setCurrentPage }) => {
   const headerStyle = {
     background: 'rgba(0, 0, 0, 0.9)',
@@ -77,7 +77,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
               <div 
                 style={{
                   ...navLinkStyle, 
-                  color: currentPage === page ? '#ff6b35' : '#ff6b35' // برتقالي كما طلبت
+                  color: currentPage === page ? '#ff6b35' : '#ff6b35' 
                 }}
                 onClick={() => setCurrentPage(page)}
               >
@@ -99,11 +99,11 @@ const Header = ({ currentPage, setCurrentPage }) => {
   );
 };
 
-// ===== مكون الصفحة الرئيسية =====
+
 const Home = ({ setCurrentPage }) => {
   const heroStyle = {
     height: '100vh',
-    backgroundImage: `url(${Gym})`, // الطريقة الصحيحة لإضافة الصورة
+    backgroundImage: `url(${Gym})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -179,7 +179,7 @@ const Home = ({ setCurrentPage }) => {
   );
 };
 
-// ===== مكون صفحة من أنا =====
+
 const About = () => {
   const sectionStyle = {
     padding: '5rem 2rem',
@@ -233,7 +233,7 @@ const About = () => {
     <section style={sectionStyle}>
       <h2 style={titleStyle}>About Me</h2>
       <div style={containerStyle}>
-        {/* صورة المدرب بالطريقة الصحيحة */}
+       
         <img 
           src={GymN} 
           alt="Personal Trainer" 
@@ -278,7 +278,7 @@ const About = () => {
   );
 };
 
-// ===== مكون صفحة البرامج =====
+
 const Programs = ({ setCurrentPage }) => {
   const sectionStyle = {
     padding: '5rem 2rem',
@@ -331,7 +331,7 @@ const Programs = ({ setCurrentPage }) => {
     transition: 'transform 0.3s'
   };
 
-  // البرامج مع الصور (مع إضافة GymS مرة أخرى)
+  
   const programs = [
     {
       title: 'Personal Training',
@@ -349,7 +349,7 @@ const Programs = ({ setCurrentPage }) => {
       title: 'Online Training',
       icon: '💻',
       description: 'Remote coaching and comprehensive workout programs that you can follow from anywhere, anytime with full support.',
-      image: GymS // إضافة GymS مرة أخرى
+      image: GymS
     }
   ];
 
@@ -370,7 +370,7 @@ const Programs = ({ setCurrentPage }) => {
               e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
             }}
           >
-            {/* استخدام الطريقة الصحيحة للصور */}
+            
             <img 
               src={program.image} 
               alt={program.title} 
@@ -402,7 +402,7 @@ const Programs = ({ setCurrentPage }) => {
   );
 };
 
-// ===== مكون صفحة آراء العملاء - تصميم جديد =====
+
 const Testimonials = () => {
   const containerStyle = {
     background: '#f8f9fa',
@@ -549,7 +549,7 @@ const Testimonials = () => {
   );
 };
 
-// ===== مكون صفحة التواصل =====
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -569,7 +569,7 @@ const Contact = () => {
   };
 
   const sectionStyle = {
-    backgroundImage: `url(${GymL})`, // الطريقة الصحيحة للخلفية
+    backgroundImage: `url(${GymL})`, 
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundAttachment: 'fixed',
@@ -760,7 +760,7 @@ const Contact = () => {
   );
 };
 
-// ===== مكون الفوتر =====
+
 const Footer = ({ setCurrentPage }) => {
   const footerStyle = {
     background: '#1a1a1a',
@@ -825,7 +825,7 @@ const Footer = ({ setCurrentPage }) => {
   );
 };
 
-// ===== المكون الرئيسي للتطبيق =====
+
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
 
